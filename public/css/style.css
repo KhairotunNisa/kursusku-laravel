@@ -1,0 +1,305 @@
+
+/* =========================================
+   KURSUSKU - YELLOW GRADIENT & BLACK THEME
+   ========================================= */
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow: #ffdf00;
+    --yellow-light: #fff9c4;
+    --yellow-dark: #f5b800;
+    --cream: #fffbea;
+    --black: #111111;
+    --black-soft: #222222;
+    --white: #ffffff;
+    --gray: #666666;
+}
+
+/* DASAR HALAMAN */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #fff9c4 0%,
+        #ffdf00 45%,
+        #ffe9a3 100%
+    );
+    color: var(--black);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(
+        90deg,
+        #ffdf00,
+        #ffc400,
+        #f5a700
+    );
+    color: var(--black);
+    padding: 18px 0;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar strong {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 17px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    background: var(--black);
+    color: var(--yellow);
+}
+
+/* HERO / BAGIAN UTAMA */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 45px;
+    align-items: center;
+    padding: 75px 0;
+}
+
+.hero > div > p:first-child {
+    display: inline-block;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: var(--black);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #a66c00;
+}
+
+.hero > div > p:not(:first-child) {
+    color: #383838;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 3px solid var(--black);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* TOMBOL */
+.btn {
+    display: inline-block;
+    background: var(--black);
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 13px 25px;
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    margin-top: 12px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--yellow);
+    color: var(--black);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* BAGIAN KURSUS */
+section h2 {
+    color: var(--black);
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    padding-bottom: 75px;
+}
+
+/* KARTU KURSUS */
+.card {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        #292929,
+        #111111
+    );
+    color: var(--white);
+    padding: 27px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 60px;
+    background: linear-gradient(
+        90deg,
+        var(--yellow),
+        var(--yellow-dark)
+    );
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--yellow);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card small {
+    display: inline-block;
+    color: var(--black);
+    background: var(--yellow);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.card h3 {
+    color: var(--yellow);
+    font-size: 21px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--black);
+    color: #dddddd;
+    border-top: 4px solid var(--yellow);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--yellow);
+}
+
+/* RESPONSIVE - TABLET DAN HP */
+@media (max-width: 760px) {
+    .container {
+        width: 92%;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar strong {
+        font-size: 24px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero img {
+        max-height: 280px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+}
+
+/* RESPONSIVE - HP KECIL */
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .navbar nav a {
+        padding: 8px 12px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+    }
+}
