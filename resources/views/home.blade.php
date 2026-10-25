@@ -22,6 +22,7 @@
 
     <main class="container">
         <section class="hero">
+            
             <div>
                 <p>Belajar Web Secara Bertahap</p>
 
@@ -32,6 +33,9 @@
                 <p>
                     KursusKu menyediakan latihan terarah untuk pemula.
                 </p>
+            </div>
+             <div class="hero-kursus">
+               <img src="{{ asset('images/hero-kursus.jpg') }}" alt="Ilustrasi KursusKu">
             </div>
         </section>
 
