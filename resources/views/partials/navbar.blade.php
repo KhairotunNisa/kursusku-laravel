@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/#katalog">Katalog Kursus</a>
+                    <a class="nav-link" href="/#kursus">Kursus Unggulan</a>
                 </li>
 
                 <li class="nav-item">

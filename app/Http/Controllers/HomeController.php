@@ -24,6 +24,16 @@ class HomeController extends Controller
                 'name' => 'Laravel Fundamental',
                 'description' => 'Belajar route, controller, Blade, dan MVC.'
             ],
+            [
+                'code' => 'UI-01',
+                'name' => 'UI/UX Design',
+                'description' => 'Belajar wireframe, prototipe, dan desain antarmuka website.',
+            ],
+            [
+                'code' => 'DB-01',
+                'name' => 'MySQL Dasar',
+                'description' => 'Belajar database, tabel, dan query SQL dasar.',
+            ],
         ];
 
         return view('home', compact('siteName', 'featured'));
