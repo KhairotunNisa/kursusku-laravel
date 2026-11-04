@@ -1,0 +1,78 @@
+AI USAGE LOG
+Proyek: KursusKu
+Teknologi: Laravel, PHP, MySQL, HTML, CSS
+
+1. Perbaikan Tampilan Halaman Detail Kursus
+
+Masalah:
+Tampilan halaman detail kursus belum tersusun dengan rapi.
+
+Bantuan AI:
+Memberikan saran perbaikan struktur Blade dan CSS agar informasi kursus lebih mudah dibaca.
+
+Keputusan:
+Menggunakan kode yang telah disesuaikan dengan desain KursusKu.
+
+Hasil:
+Halaman detail kursus berhasil ditampilkan dengan lebih rapi.
+
+2. Pengujian Validasi Kode Kursus
+
+Masalah:
+Memastikan kode kursus yang sama tidak dapat digunakan lebih dari satu kali.
+
+Bantuan AI:
+Menyarankan pengujian dengan memasukkan kode kursus yang sudah terdaftar.
+
+Keputusan:
+Melakukan pengujian melalui formulir tambah kursus.
+
+Hasil:
+Sistem menolak penyimpanan dan menampilkan pesan bahwa kode kursus sudah digunakan.
+
+3. Pengujian Validasi Kuota
+
+Masalah:
+Memastikan jumlah kuota tidak melebihi batas maksimal.
+
+Bantuan AI:
+Menyarankan pengujian menggunakan kuota sebanyak 501 peserta.
+
+Keputusan:
+Melakukan pengujian dengan memasukkan nilai kuota 501.
+
+Hasil:
+Isi hasil berdasarkan pengujian yang dilakukan pada aplikasi.
+
+4. Pengujian Update Data Kursus
+
+Masalah:
+Memastikan perubahan data kursus dapat disimpan dengan benar.
+
+Bantuan AI:
+Memberikan arahan untuk mengubah informasi kursus tanpa mengubah kode kursus.
+
+Keputusan:
+Melakukan perubahan pada salah satu data kursus.
+
+Hasil:
+Data kursus berhasil diperbarui dan sistem menampilkan pesan keberhasilan.
+
+5. Pengujian Hapus Data Kursus
+
+Masalah:
+Memastikan fitur hapus dapat menghapus data kursus.
+
+Bantuan AI:
+Menyarankan penggunaan data percobaan agar data utama tidak terhapus.
+
+Keputusan:
+Membuat data kursus percobaan dengan kode DEL-001, kemudian menghapusnya.
+
+Hasil:
+Data percobaan berhasil dihapus dari daftar kursus.
+
+Kesimpulan:
+AI digunakan sebagai alat bantu dalam memahami kode,
+memperbaiki tampilan, dan menyusun pengujian aplikasi KursusKu.
+Setiap saran diperiksa dan disesuaikan kembali dengan kebutuhan proyek.

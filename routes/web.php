@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EnrollmentController;
 
@@ -39,3 +40,4 @@ Route::post('/pendaftaran', [EnrollmentController::class, 'store'])
 
     return response()->json($availability[$course]);
 })->name('courses.availability');
+Route::resource('courses', CourseController::class);
