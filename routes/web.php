@@ -4,23 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ParticipantController;
 
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-Route::get('/pendaftaran', function () {
-    $courses = [
-        1 => ['name' => 'Web Dasar'],
-        2 => ['name' => 'PHP Dasar'],
-        3 => ['name' => 'Laravel Dasar'],
-    ];
+// Route pendaftaran kursus
+Route::resource('enrollments', EnrollmentController::class)
+    ->only(['index', 'create', 'store']);
 
-    return view('enrollments.create', compact('courses'));
-})->name('enrollments.create');
-
-Route::post('/pendaftaran', [EnrollmentController::class, 'store'])
-    ->name('enrollments.store');
-    Route::get('/courses/{course}/availability', function (int $course) {
+// Route ketersediaan kursus
+Route::get('/courses/{course}/availability', function (int $course) {
     $availability = [
         1 => [
             'course' => 'Web Dasar',
@@ -40,4 +34,10 @@ Route::post('/pendaftaran', [EnrollmentController::class, 'store'])
 
     return response()->json($availability[$course]);
 })->name('courses.availability');
+
+// CRUD kursus
 Route::resource('courses', CourseController::class);
+
+// Data Participant
+Route::get('/participants', [ParticipantController::class, 'index'])
+    ->name('participants.index');

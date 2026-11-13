@@ -57,26 +57,40 @@
 .navbar .btn-daftar {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    background: #171717;
-    color: #ffcf24 !important;
-    padding: 12px 25px;
-    border-radius: 30px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.45);
+    color: #252525 !important;
+    padding: 9px 15px;
+    border-radius: 12px;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
-    border: 2px solid #171717;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
 }
 
-/* HOVER TOMBOL */
 .navbar .btn-daftar:hover {
     background: #ffffff;
     color: #171717 !important;
-    border-color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.daftar-icon {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171717;
+    color: #ffd21f;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.daftar-chevron {
+    font-size: 15px;
+    margin-left: 3px;
 }
 
 /* TOGGLER MOBILE */
@@ -153,15 +167,22 @@
                     </a>
                 </li>
 
-                <li class="nav-item ms-lg-3">
-                    <a href="{{ route('enrollments.create') }}"
-                    class="btn btn-dark"
-                    style="font-size: 16px; font-weight: 700; padding: 8px 18px; border-radius: 30px; white-space: nowrap;">
-                        Daftar Sekarang
+                <li class="nav-item">
+                    <a href="{{ route('participants.index') }}"
+                    class="nav-link">
+                        Participant
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('enrollments.create') }}" class="btn-daftar">
+                        <span class="daftar-icon">+</span>
+                        <span>Daftar Sekarang</span>
+                        <span class="daftar-chevron"></span>
+                    </a>
+                </li>
+
             </ul>
         </div>
-           
     </div>
 </nav>
